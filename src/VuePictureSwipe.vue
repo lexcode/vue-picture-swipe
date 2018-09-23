@@ -66,9 +66,6 @@
   import 'photoswipe/dist/photoswipe.css'
   import 'photoswipe/dist/default-skin/default-skin.css'
 
-  import VueLazyload from 'vue-lazyload'
-  Vue.use(VueLazyload)
-
   export default {
     props: {
       items: {
