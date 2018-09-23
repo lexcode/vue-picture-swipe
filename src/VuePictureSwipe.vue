@@ -9,7 +9,7 @@
           v-for="(item, index) in items" :src="item.src"
           v-bind:key="index">
         <a :href="item.src" itemprop="contentUrl" :data-size="'' + item.w + 'x' + item.h" :title="item.title">
-          <img src="item.thumbnail" itemprop="thumbnail"/>
+          <img v-lazy="item.thumbnail" itemprop="thumbnail"/>
         </a>
       </figure>
     </div>
