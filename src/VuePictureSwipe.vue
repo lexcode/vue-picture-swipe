@@ -9,7 +9,7 @@
           v-for="(item, index) in items" :src="item.src"
           v-bind:key="index">
         <a :href="item.src" itemprop="contentUrl" :data-size="'' + item.w + 'x' + item.h" :title="item.title">
-          <img :src="item.thumbnail" itemprop="thumbnail"/>
+          <img src="item.thumbnail" itemprop="thumbnail"/>
         </a>
       </figure>
     </div>
@@ -65,6 +65,9 @@
   import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default'
   import 'photoswipe/dist/photoswipe.css'
   import 'photoswipe/dist/default-skin/default-skin.css'
+
+  import VueLazyload from 'vue-lazyload'
+  Vue.use(VueLazyload)
 
   export default {
     props: {
